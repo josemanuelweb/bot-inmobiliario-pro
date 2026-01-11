@@ -1,0 +1,33 @@
+name: Actualizar Datos Inmobiliarios
+on:
+  schedule:
+    # Se ejecuta todos los días a las 09:00 AM (Hora Argentina aprox)
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v2
+
+      - name: Configurar Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Instalar librerías
+        run: |
+          pip install requests beautifulsoup4 pandas
+
+      - name: Ejecutar Buscador
+        run: python buscador.py
+
+      - name: Guardar cambios en GitHub
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          git add propiedades.json
+          git commit -m "Auto-update: $(date)" || exit 0
+          git push
