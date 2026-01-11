@@ -1,0 +1,17 @@
+[
+    {
+        "titulo": "Depto 2 Amb. Palermo",
+        "barrio": "Palermo",
+        "precio": "USD 92.000"
+    },
+    {
+        "titulo": "Monoambiente Recoleta",
+        "barrio": "Recoleta",
+        "precio": "USD 68.500"
+    },
+    {
+        "titulo": "PH 3 Amb. Almagro",
+        "barrio": "Almagro",
+        "precio": "USD 115.000"
+    }
+]
