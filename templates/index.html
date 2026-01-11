@@ -3,56 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InmoData Pro - Reportes en Tiempo Real</title>
+    <title>InmoData Pro - Oportunidades</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="https://fav.farm/🏠" />
 </head>
-<body class="bg-slate-900 text-white flex items-center justify-center min-h-screen">
+<body class="bg-[#0f172a] text-white min-h-screen p-4 font-sans">
 
-    <div class="space-y-6">
-        <h3 class="text-emerald-400 font-bold flex items-center">
-            <span class="relative flex h-3 w-3 mr-2">
+    <div class="max-w-2xl mx-auto space-y-6">
+        
+        <div class="flex items-center space-x-3 mb-4">
+            <span class="relative flex h-3 w-3">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
             </span>
-            Oportunidades Detectadas Ahora:
-        </h3>
+            <h2 class="text-xl font-bold text-emerald-400">Oportunidades Detectadas Ahora:</h2>
+        </div>
 
-        <div class="bg-slate-900/50 rounded-xl border border-slate-700 divide-y divide-slate-700">
-            {% for p in propiedades %}
-            <div class="p-4 flex justify-between items-center">
-                <div>
-                    <p class="text-sm font-medium text-slate-200">{{ p.titulo }}</p>
-                    <p class="text-xs text-slate-500">{{ p.barrio }}</p>
-                </div>
-                <span class="text-emerald-400 font-mono font-bold">{{ p.precio }}</span>
-            </div>
-            {% endfor %}
+        <div class="flex flex-col gap-6">
             
-            <div class="p-4 bg-gradient-to-b from-transparent to-slate-900/90 text-center italic text-xs text-slate-500">
-                +147 propiedades más detectadas hoy...
+            <div class="bg-slate-800/40 rounded-2xl border border-slate-700 overflow-hidden shadow-xl w-full">
+                <div class="divide-y divide-slate-700">
+                    {% for p in propiedades %}
+                    <div class="p-5 flex justify-between items-center hover:bg-slate-700/30 transition-colors">
+                        <div class="pr-2">
+                            <p class="text-base font-semibold text-slate-100">{{ p.titulo }}</p>
+                            <p class="text-xs text-slate-400 uppercase tracking-wider">{{ p.barrio }}</p>
+                        </div>
+                        <div class="text-right flex-shrink-0 min-w-[90px]">
+                            <p class="text-[10px] text-emerald-500 font-bold">USD</p>
+                            <p class="text-xl font-mono font-black text-emerald-400">{{ p.precio.split(' ')[1] if ' ' in p.precio else p.precio }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="p-3 bg-slate-900/60 text-center">
+                    <p class="text-xs text-slate-500">+147 propiedades más analizadas hoy...</p>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4 p-5 bg-slate-800/30 rounded-2xl border border-slate-700 w-full">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Jose&backgroundColor=059669" alt="Dev" class="h-14 w-14 rounded-full border-2 border-emerald-500/30 bg-slate-700">
+                <div>
+                    <p class="text-base font-bold text-slate-100">Hola, soy Jose Manuel</p>
+                    <p class="text-xs text-slate-400 leading-tight">
+                        Estudiante de IT. Creé este bot para automatizar mi búsqueda personal y ahora comparto la data con inversores.
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div class="bg-emerald-500/10 border border-emerald-500/20 p-6 rounded-2xl text-center">
-            <p class="text-sm mb-4">¿Quieres el Excel completo con <strong>dueños directos</strong> y análisis de <strong>precio bajo mercado</strong>?</p>
-            
-            <a href="https://wa.me/5491125427382?text=Hola!%20Vi%20la%20muestra%20gratis%20y%20quiero%20el%20reporte%20completo" 
-            class="block w-full bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-extrabold py-4 rounded-xl shadow-lg transition-transform hover:scale-105">
+        <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-3xl border border-emerald-500/30 shadow-2xl">
+            <p class="text-sm text-slate-200 text-center mb-5">
+                ¿Quieres el Excel completo con **dueños directos** y análisis de **precio bajo mercado**?
+            </p>
+            <a href="https://wa.me/5491125427382?text=Hola%20Jose%21%20Vi%20la%20muestra%20gratis%20y%20quiero%20el%20reporte%20completo" 
+               class="block w-full bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-slate-900 text-center font-black py-4 rounded-2xl shadow-lg transition-all">
                 DESCARGAR REPORTE FULL ($5.000 ARS)
             </a>
-            <p class="text-[10px] text-slate-500 mt-3 uppercase tracking-tighter">Pago único • Entrega inmediata por WhatsApp</p>
         </div>
     </div>
-
-    <footer class="mt-10 border-t border-slate-800 pt-6 flex items-center space-x-4">
-        <div class="h-10 w-10 bg-slate-700 rounded-full flex-shrink-0 border border-emerald-500/50">
-            <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Jose" class="rounded-full">
-        </div>
-        <div>
-            <p class="text-xs text-slate-300 font-bold">Hola, soy Jose Manuel</p>
-            <p class="text-[10px] text-slate-500 leading-tight">Estudiante de IT. Creé este bot para automatizar la búsqueda de mi primer departamento y ahora lo comparto con inversores.</p>
-        </div>
-    </footer>
 
 </body>
 </html>
