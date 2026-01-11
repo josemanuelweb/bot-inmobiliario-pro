@@ -1,9 +1,8 @@
 name: Actualizar Datos Inmobiliarios
 on:
   schedule:
-    # Se ejecuta todos los días a las 09:00 AM (Hora Argentina aprox)
     - cron: '0 12 * * *'
-  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub
+  workflow_dispatch:
 
 jobs:
   build:
@@ -19,7 +18,7 @@ jobs:
 
       - name: Instalar librerías
         run: |
-          pip install requests beautifulsoup4 pandas
+          pip install requests beautifulsoup4 pandas openpyxl
 
       - name: Ejecutar Buscador
         run: python buscador.py
@@ -28,6 +27,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
-          git add propiedades.json
-          git commit -m "Auto-update: $(date)" || exit 0
+          git add propiedades.json Reporte_Oportunidades_InmoData.xlsx
+          git commit -m "Auto-update data and excel" || exit 0
           git push
