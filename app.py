@@ -1,21 +1,18 @@
-from flask import Flask, render_template
-import json
+from flask import Flask, render_template, send_from_directory
 import os
 
-app = Flask(__name__)
-
-def cargar_propiedades():
-    # Si el archivo existe, lo lee; si no, devuelve una lista vacía
-    if os.path.exists('propiedades.json'):
-        with open('propiedades.json', 'r') as f:
-            return json.load(f)
-    return []
+# Configuramos Flask para que busque el index en la raíz '.' 
+# en lugar de la carpeta 'templates'
+app = Flask(__name__, template_folder='.', static_folder='.')
 
 @app.route('/')
 def index():
-    datos = cargar_propiedades()
-    return render_template('index.html', propiedades=datos)
+    return render_template('index.html')
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+# Ruta para que la web pueda leer el JSON y el Excel
+@app.route('/<path:path>')
+def send_file(path):
+    return send_from_directory('.', path)
+
+if __name__ == '__main__':
+    app.run(debug=True)
