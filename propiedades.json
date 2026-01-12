@@ -1,8 +1,20 @@
 [
     {
-        "Barrio": "Recoleta (Oportunidad)",
-        "Precio": "USD 85.000",
-        "Descripcion": "Excelente 2 Ambientes - Dueño Directo",
+        "Barrio": "Palermo",
+        "Precio": "USD 125.000",
+        "Descripcion": "Oportunidad 2 ambientes",
+        "Link": "https://www.zonaprop.com.ar"
+    },
+    {
+        "Barrio": "Recoleta",
+        "Precio": "USD 98.000",
+        "Descripcion": "Ideal inversión",
+        "Link": "https://www.zonaprop.com.ar"
+    },
+    {
+        "Barrio": "Belgrano",
+        "Precio": "USD 115.000",
+        "Descripcion": "Dueño directo impecable",
         "Link": "https://www.zonaprop.com.ar"
     }
 ]

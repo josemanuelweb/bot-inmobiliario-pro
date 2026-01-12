@@ -54,5 +54,32 @@
             </div>
         </div>
     </div>
+
+    <scrip>
+// El fetch debe apuntar al nivel donde está el JSON
+fetch('./propiedades.json')
+    .then(response => {
+        if (!response.ok) throw new Error("No se encontró el archivo de datos");
+        return response.json();
+    })
+    .then(data => {
+        const contenedor = document.getElementById('lista-propiedades');
+        contenedor.innerHTML = ''; 
+        data.forEach(prop => {
+            contenedor.innerHTML += `
+                <div class="bg-gray-800 p-4 rounded-lg border border-green-500/30">
+                    <h3 class="text-xl font-bold text-green-400">${prop.Barrio}</h3>
+                    <p class="text-2xl font-bold my-2">${prop.Precio}</p>
+                    <p class="text-gray-400 mb-4">${prop.Descripcion}</p>
+                    <a href="${prop.Link}" target="_blank" class="bg-green-600 px-4 py-2 rounded block text-center font-bold">VER FICHA</a>
+                </div>
+            `;
+        });
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('lista-propiedades').innerHTML = '<p class="text-red-400">Cargando datos frescos... actualice en un minuto.</p>';
+    });
+    </script>
 </body>
 </html>
