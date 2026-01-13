@@ -13,8 +13,7 @@
     </header>
 
     <div id="lista-propiedades" class="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
-        <p class="text-gray-400 text-center col-span-full">Cargando las mejores ofertas...</p>
-    </div>
+        </div>
 
     <div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-800 rounded-xl border-2 border-green-600 text-center shadow-2xl">
         <p class="mb-4 text-lg">¿Quieres el Excel completo con <strong>dueños directos</strong>?</p>
@@ -25,32 +24,27 @@
 
     <script>
         fetch('./propiedades.json')
-            .then(res => res.json())
-            .then(data => {
-                const contenedor = document.getElementById('lista-propiedades');
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                var contenedor = document.getElementById('lista-propiedades');
                 contenedor.innerHTML = ''; 
 
-                data.forEach(prop => {
-                    // Usamos una forma de escribir código más "clásica" para evitar errores de interpretación
-                    const tarjeta = document.createElement('div');
-                    tarjeta.className = "bg-gray-900 p-6 rounded-lg border border-green-500/30 shadow-xl flex flex-col justify-between";
+                data.forEach(function(prop) {
+                    var html = '<div class="bg-gray-900 p-6 rounded-lg border border-green-500/30 shadow-xl flex flex-col justify-between">';
+                    html += '<div>';
+                    html += '<h3 class="text-xl font-bold text-green-400">' + prop.Barrio + '</h3>';
+                    html += '<p class="text-3xl font-bold my-2 text-white">' + prop.Precio + '</p>';
+                    html += '<p class="text-gray-400 mb-4">' + prop.Descripcion + '</p>';
+                    html += '</div>';
+                    html += '<a href="' + prop.Link + '" target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded block text-center font-bold transition">VER FICHA</a>';
+                    html += '</div>';
                     
-                    tarjeta.innerHTML = `
-                        <div>
-                            <h3 class="text-xl font-bold text-green-400">` + prop.Barrio + `</h3>
-                            <p class="text-3xl font-bold my-2 text-white">` + prop.Precio + `</p>
-                            <p class="text-gray-400 mb-4">` + prop.Descripcion + `</p>
-                        </div>
-                        <a href="` + prop.Link + `" target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded block text-center font-bold transition">
-                            VER FICHA
-                        </a>
-                    `;
-                    contenedor.appendChild(tarjeta);
+                    contenedor.innerHTML += html;
                 });
             })
-            .catch(err => {
+            .catch(function(err) {
                 console.error(err);
-                document.getElementById('lista-propiedades').innerHTML = '<p class="text-center col-span-full">Actualizando catálogo...</p>';
+                document.getElementById('lista-propiedades').innerHTML = '<p class="text-center col-span-full">Actualizando oportunidades...</p>';
             });
     </script>
 </body>
