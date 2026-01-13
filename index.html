@@ -13,21 +13,21 @@
     </header>
 
     <div id="lista-propiedades" class="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
-        <p class="text-gray-400">Buscando las mejores ofertas...</p>
+        <p class="text-gray-400 text-center col-span-full">Buscando las mejores ofertas...</p>
     </div>
 
     <div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-800 rounded-xl border-2 border-green-600 text-center">
-        <p class="mb-4">¿Quieres el Excel con **dueños directos** y análisis de precios?</p>
-        <a href="https://wa.me/TU_NUMERO" class="bg-green-500 text-black font-bold py-4 px-8 rounded-full text-xl hover:bg-green-400 inline-block">
+        <p class="mb-4">¿Quieres el Excel completo con <strong>dueños directos</strong>?</p>
+        <a href="https://wa.me/54911XXXXXXXX" class="bg-green-500 text-black font-bold py-4 px-8 rounded-full text-xl hover:bg-green-400 inline-block">
             DESCARGAR REPORTE FULL ($5.000 ARS)
         </a>
     </div>
 
     <script>
-        // Este bloque es el que "dibuja" las casas en la pantalla
+        // Importante: Todo el código de abajo debe estar dentro de etiquetas <script>
         fetch('./propiedades.json')
             .then(response => {
-                if (!response.ok) throw new Error("No se encontró el archivo de datos");
+                if (!response.ok) throw new Error("Error cargando datos");
                 return response.json();
             })
             .then(data => {
@@ -35,11 +35,11 @@
                 contenedor.innerHTML = ''; 
                 data.forEach(prop => {
                     contenedor.innerHTML += `
-                        <div class="bg-gray-800 p-6 rounded-lg border border-green-500/30">
-                            <h3 class="text-xl font-bold text-green-400">${prop.Barrio}</h3>
-                            <p class="text-3xl font-bold my-2">${prop.Precio}</p>
-                            <p class="text-gray-400 mb-4">${prop.Descripcion}</p>
-                            <a href="${prop.Link}" target="_blank" class="bg-green-600 hover:bg-green-500 px-4 py-2 rounded block text-center font-bold transition">
+                        <div class="bg-gray-900 p-6 rounded-lg border border-green-500/30 shadow-xl">
+                            <h3 class="text-xl font-bold text-green-400">\${prop.Barrio}</h3>
+                            <p class="text-3xl font-bold my-2">\${prop.Precio}</p>
+                            <p class="text-gray-400 mb-4">\${prop.Descripcion}</p>
+                            <a href="\${prop.Link}" target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded block text-center font-bold transition">
                                 VER FICHA
                             </a>
                         </div>
@@ -48,7 +48,7 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-                document.getElementById('lista-propiedades').innerHTML = '<p class="text-red-400 text-center">Cargando datos frescos... actualice en un minuto.</p>';
+                document.getElementById('lista-propiedades').innerHTML = '<p class="text-red-400 text-center col-span-full">Actualizando datos... por favor regrese en un momento.</p>';
             });
     </script>
 </body>
