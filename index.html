@@ -12,40 +12,29 @@
         <h1 class="text-4xl font-bold text-green-500">🟢 OPORTUNIDADES HOY:</h1>
     </header>
 
-    <div id="lista-propiedades" class="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
+    <div class="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
+        {% for prop in propiedades %}
+        <div class="bg-gray-900 p-6 rounded-lg border border-green-500/30 shadow-xl flex flex-col justify-between">
+            <div>
+                <h3 class="text-xl font-bold text-green-400">{{ prop.Barrio }}</h3>
+                <p class="text-3xl font-bold my-2 text-white">{{ prop.Precio }}</p>
+                <p class="text-gray-400 mb-4">{{ prop.Descripcion }}</p>
+            </div>
+            <a href="{{ prop.Link }}" target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded block text-center font-bold transition">
+                VER FICHA
+            </a>
         </div>
+        {% else %}
+        <p class="text-center col-span-full text-gray-400">Actualizando catálogo... regrese en unos instantes.</p>
+        {% endfor %}
+    </div>
 
     <div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-800 rounded-xl border-2 border-green-600 text-center shadow-2xl">
         <p class="mb-4 text-lg">¿Quieres el Excel completo con <strong>dueños directos</strong>?</p>
-        <a href="https://wa.me/5491125427382" class="bg-green-500 text-black font-bold py-4 px-8 rounded-full text-xl hover:bg-green-400 inline-block transition transform hover:scale-105">
+        <a href="https://wa.me/54911XXXXXXXX" class="bg-green-500 text-black font-bold py-4 px-8 rounded-full text-xl hover:bg-green-400 inline-block">
             DESCARGAR REPORTE FULL ($5.000 ARS)
         </a>
     </div>
 
-    <script>
-        fetch('./propiedades.json')
-            .then(function(res) { return res.json(); })
-            .then(function(data) {
-                var contenedor = document.getElementById('lista-propiedades');
-                contenedor.innerHTML = ''; 
-
-                data.forEach(function(prop) {
-                    var html = '<div class="bg-gray-900 p-6 rounded-lg border border-green-500/30 shadow-xl flex flex-col justify-between">';
-                    html += '<div>';
-                    html += '<h3 class="text-xl font-bold text-green-400">' + prop.Barrio + '</h3>';
-                    html += '<p class="text-3xl font-bold my-2 text-white">' + prop.Precio + '</p>';
-                    html += '<p class="text-gray-400 mb-4">' + prop.Descripcion + '</p>';
-                    html += '</div>';
-                    html += '<a href="' + prop.Link + '" target="_blank" class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded block text-center font-bold transition">VER FICHA</a>';
-                    html += '</div>';
-                    
-                    contenedor.innerHTML += html;
-                });
-            })
-            .catch(function(err) {
-                console.error(err);
-                document.getElementById('lista-propiedades').innerHTML = '<p class="text-center col-span-full">Actualizando oportunidades...</p>';
-            });
-    </script>
 </body>
 </html>
