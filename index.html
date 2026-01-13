@@ -24,16 +24,58 @@
                 VER FICHA
             </a>
         </div>
-        {% else %}
-        <p class="text-center col-span-full text-gray-400">Actualizando catálogo... regrese en unos instantes.</p>
         {% endfor %}
     </div>
 
-    <div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-800 rounded-xl border-2 border-green-600 text-center shadow-2xl">
-        <p class="mb-4 text-lg">¿Quieres el Excel completo con <strong>dueños directos</strong>?</p>
-        <a href="https://wa.me/5491125427382" class="bg-green-500 text-black font-bold py-4 px-8 rounded-full text-xl hover:bg-green-400 inline-block">
-            DESCARGAR REPORTE FULL ($5.000 ARS)
-        </a>
+    <div class="max-w-5xl mx-auto mt-20 mb-12">
+        <h2 class="text-3xl font-bold text-center mb-10 text-white">Elige tu plan de acceso al <span class="text-green-500">Reporte Full</span></h2>
+        
+        <div class="grid gap-6 md:grid-cols-3">
+            
+            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Reporte Único</h3>
+                    <p class="text-gray-400 text-sm mb-4">Ideal para una búsqueda rápida hoy.</p>
+                    <p class="text-3xl font-bold mb-6">$5.000 <span class="text-sm font-normal text-gray-400">ARS</span></p>
+                    <ul class="text-sm space-y-2 mb-8 text-gray-300">
+                        <li>✅ Excel de hoy</li>
+                        <li>✅ Dueños directos</li>
+                        <li>✅ Filtro de precio/m2</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5491125427382?text=Hola!%20Quiero%20el%20Reporte%20Unico%20de%205000" class="border border-green-500 text-green-500 hover:bg-green-500 hover:text-black font-bold py-3 rounded-lg text-center transition">ELEGIR PLAN</a>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-xl border-2 border-green-500 shadow-2xl relative transform md:scale-105 flex flex-col justify-between">
+                <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500 text-black text-xs font-black px-3 py-1 rounded-full uppercase">MÁS ELEGIDO</span>
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Pase 7 Días</h3>
+                    <p class="text-gray-400 text-sm mb-4">No te pierdas ninguna oferta nueva.</p>
+                    <p class="text-3xl font-bold mb-6">$15.000 <span class="text-sm font-normal text-gray-400">ARS</span></p>
+                    <ul class="text-sm space-y-2 mb-8 text-green-100">
+                        <li>✅ Reporte diario x 7 días</li>
+                        <li>✅ Soporte vía WhatsApp</li>
+                        <li>✅ Alerta de nuevas bajas</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5491125427382?text=Hola!%20Quiero%20el%20Pase%20de%207%20Dias" class="bg-green-500 text-black font-bold py-3 rounded-lg text-center transition hover:bg-green-400">ELEGIR PLAN</a>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Inversor Pro</h3>
+                    <p class="text-gray-400 text-sm mb-4">Información continua y personalizada.</p>
+                    <p class="text-3xl font-bold mb-6">Consultar <span class="text-sm font-normal text-gray-400">ARS</span></p>
+                    <ul class="text-sm space-y-2 mb-8 text-gray-300">
+                        <li>✅ Acceso mensual full</li>
+                        <li>✅ Análisis de barrios</li>
+                        <li>✅ Pedidos específicos</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5491125427382?text=Hola!%20Me%20interesa%20el%20Plan%20Inversor%20Pro" class="border border-gray-400 text-gray-400 hover:bg-white hover:text-black font-bold py-3 rounded-lg text-center transition">HABLAR CON ASESOR</a>
+            </div>
+
+        </div>
     </div>
 
 </body>
