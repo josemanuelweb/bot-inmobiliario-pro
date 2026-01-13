@@ -2,19 +2,25 @@
     {
         "Barrio": "Palermo",
         "Precio": "USD 125.000",
-        "Descripcion": "Oportunidad 2 ambientes",
+        "Descripcion": "2 Ambientes - Oportunidad",
         "Link": "https://www.zonaprop.com.ar"
     },
     {
         "Barrio": "Recoleta",
         "Precio": "USD 98.000",
-        "Descripcion": "Ideal inversión",
+        "Descripcion": "Ideal Inversión / AirBnb",
         "Link": "https://www.zonaprop.com.ar"
     },
     {
         "Barrio": "Belgrano",
         "Precio": "USD 115.000",
         "Descripcion": "Dueño directo impecable",
+        "Link": "https://www.zonaprop.com.ar"
+    },
+    {
+        "Barrio": "Caballito",
+        "Precio": "USD 89.000",
+        "Descripcion": "3 Ambientes luminoso",
         "Link": "https://www.zonaprop.com.ar"
     }
 ]
