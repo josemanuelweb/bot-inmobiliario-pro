@@ -3,83 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InmoData Pro - Oportunidades</title>
+    <title>Lógica Digital - InmoData</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="https://fav.farm/🏠" />
 </head>
 <body class="bg-[#0f172a] text-white min-h-screen p-4 font-sans">
-    <div class="max-w-2xl mx-auto space-y-6">
-        
-        <div class="flex items-center space-x-3 py-4">
-            <span class="relative flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-            </span>
-            <h2 class="text-xl font-bold text-emerald-400 uppercase tracking-tight">Oportunidades Hoy:</h2>
-        </div>
 
-        <div class="flex flex-col gap-6">
-            <div class="bg-slate-800/40 rounded-3xl border border-slate-700 overflow-hidden shadow-2xl w-full">
-                <div class="divide-y divide-slate-700">
-                    {% for p in propiedades %}
-                    <div class="p-5 flex justify-between items-center hover:bg-slate-700/30 transition-colors">
-                        <div>
-                            <p class="text-base font-bold text-slate-100">{{ p.titulo }}</p>
-                            <p class="text-xs text-slate-500 font-semibold tracking-wider uppercase">{{ p.barrio }}</p>
-                        </div>
-                        <div class="text-right flex-shrink-0 min-w-[100px]">
-                            <p class="text-xl font-mono font-black text-emerald-400">{{ p.precio }}</p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
+    <header class="max-w-4xl mx-auto text-center py-8">
+        <h1 class="text-4xl font-bold text-green-500">🟢 OPORTUNIDADES HOY:</h1>
+    </header>
 
-            <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-3xl border border-emerald-500/30 shadow-xl">
-                <p class="text-sm text-slate-300 text-center mb-6 leading-relaxed">
-                    ¿Quieres el Excel con **dueños directos** y análisis de precios?
-                </p>
-                <a href="https://wa.me/5491125427382?text=Hola%20Jose%21%20Quiero%20el%20reporte%20completo" 
-                   class="block w-full bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-slate-900 text-center font-black py-4 rounded-2xl transition-all shadow-lg">
-                    DESCARGAR REPORTE FULL ($5.000 ARS)
-                </a>
-            </div>
-
-            <div class="flex items-center space-x-4 p-5 bg-slate-800/20 rounded-2xl border border-slate-800 w-full">
-                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Jose&backgroundColor=059669" class="h-12 w-12 rounded-full border border-emerald-500/30">
-                <div>
-                    <p class="text-sm font-bold text-slate-200">Jose Manuel - Dev</p>
-                    <p class="text-[11px] text-slate-500">Estudiante de IT. Data actualizada por bot cada 24hs.</p>
-                </div>
-            </div>
-        </div>
+    <div id="lista-propiedades" class="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
+        <p class="text-gray-400">Buscando las mejores ofertas...</p>
     </div>
 
-    <scrip>
-// El fetch debe apuntar al nivel donde está el JSON
-fetch('./propiedades.json')
-    .then(response => {
-        if (!response.ok) throw new Error("No se encontró el archivo de datos");
-        return response.json();
-    })
-    .then(data => {
-        const contenedor = document.getElementById('lista-propiedades');
-        contenedor.innerHTML = ''; 
-        data.forEach(prop => {
-            contenedor.innerHTML += `
-                <div class="bg-gray-800 p-4 rounded-lg border border-green-500/30">
-                    <h3 class="text-xl font-bold text-green-400">${prop.Barrio}</h3>
-                    <p class="text-2xl font-bold my-2">${prop.Precio}</p>
-                    <p class="text-gray-400 mb-4">${prop.Descripcion}</p>
-                    <a href="${prop.Link}" target="_blank" class="bg-green-600 px-4 py-2 rounded block text-center font-bold">VER FICHA</a>
-                </div>
-            `;
-        });
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        document.getElementById('lista-propiedades').innerHTML = '<p class="text-red-400">Cargando datos frescos... actualice en un minuto.</p>';
-    });
+    <div class="max-w-4xl mx-auto mt-12 p-6 bg-gray-800 rounded-xl border-2 border-green-600 text-center">
+        <p class="mb-4">¿Quieres el Excel con **dueños directos** y análisis de precios?</p>
+        <a href="https://wa.me/TU_NUMERO" class="bg-green-500 text-black font-bold py-4 px-8 rounded-full text-xl hover:bg-green-400 inline-block">
+            DESCARGAR REPORTE FULL ($5.000 ARS)
+        </a>
+    </div>
+
+    <script>
+        // Este bloque es el que "dibuja" las casas en la pantalla
+        fetch('./propiedades.json')
+            .then(response => {
+                if (!response.ok) throw new Error("No se encontró el archivo de datos");
+                return response.json();
+            })
+            .then(data => {
+                const contenedor = document.getElementById('lista-propiedades');
+                contenedor.innerHTML = ''; 
+                data.forEach(prop => {
+                    contenedor.innerHTML += `
+                        <div class="bg-gray-800 p-6 rounded-lg border border-green-500/30">
+                            <h3 class="text-xl font-bold text-green-400">${prop.Barrio}</h3>
+                            <p class="text-3xl font-bold my-2">${prop.Precio}</p>
+                            <p class="text-gray-400 mb-4">${prop.Descripcion}</p>
+                            <a href="${prop.Link}" target="_blank" class="bg-green-600 hover:bg-green-500 px-4 py-2 rounded block text-center font-bold transition">
+                                VER FICHA
+                            </a>
+                        </div>
+                    `;
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('lista-propiedades').innerHTML = '<p class="text-red-400 text-center">Cargando datos frescos... actualice en un minuto.</p>';
+            });
     </script>
 </body>
 </html>
