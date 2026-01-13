@@ -28,7 +28,9 @@ def index():
         faltantes = 4 - len(datos)
         datos.extend(respaldo[:faltantes])
 
-    return render_template('index.html', propiedades=datos)
+    # En la web solo mostramos las primeras 4 para que se vea pro
+    web_datos = datos[:4]
+    return render_template('index.html', propiedades=web_datos)
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
