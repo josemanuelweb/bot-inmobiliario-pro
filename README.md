@@ -28,7 +28,7 @@ Este motor de búsqueda inteligente fue desarrollado para optimizar la prospecci
 ## 🔒 Seguridad y Protección del Activo
 Este repositorio contiene la arquitectura lógica y la interfaz del proyecto. Por razones de seguridad y protección del modelo de negocio, la base de datos completa (`.xlsx`) está excluida del repositorio público mediante el uso de `.gitignore`. 
 
-> **Nota:** El acceso a la base de datos completa con miles de registros está disponible bajo solicitud profesional.
+> **Nota:** El acceso a la base de datos completa de registros está disponible bajo solicitud profesional.
 
 ---
 
@@ -39,7 +39,7 @@ Este proyecto aplica los conocimientos consolidados durante el primer año de la
 
 ## 📩 Contacto
 ¿Interesado en una implementación similar o en el reporte completo? 
-* **LinkedIn:** [Tu Perfil Profesional](https://www.linkedin.com/in/josemanuell/)
+* **LinkedIn:** [Mi Perfil Profesional](https://www.linkedin.com/in/josemanuell/)
 * **Portafolio:** [Explorar mi Web Personal](index.html)
 
 ---
