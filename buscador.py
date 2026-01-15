@@ -69,9 +69,20 @@ def hacer_scraping():
     with open('propiedades.json', 'w', encoding='utf-8') as f:
         json.dump(resultados, f, indent=4, ensure_ascii=False)
     
+    # Convertimos a DataFrame
     df = pd.DataFrame(resultados)
+
+    # --- FILTRO DE CALIDAD (Anti-Duplicados) ---
+    # Si el Barrio, Precio y Descripción son idénticos, borramos las repeticiones
+    # para que el cliente reciba una lista variada y no 10 veces lo mismo.
+    if not df.empty:
+        total_antes = len(df)
+        df = df.drop_duplicates(subset=['Barrio', 'Precio', 'Descripcion'], keep='first')
+        total_despues = len(df)
+        print(f"✨ Limpieza completada: Se eliminaron {total_antes - total_despues} avisos repetidos.")
+    
+    # Guardamos el Excel limpio
     df.to_excel('Reporte_Oportunidades_InmoData.xlsx', index=False)
-    print("✅ Archivos generados correctamente.")
 
 if __name__ == "__main__":
     hacer_scraping()
