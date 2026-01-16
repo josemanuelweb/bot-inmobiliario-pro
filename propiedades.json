@@ -1,86 +1,170 @@
 [
     {
-        "Barrio": "Boedo, Capital Federal",
-        "Precio": "$ 490.000",
-        "Descripcion": "75 m² tot.2 amb.1 dorm.1 baño1 coch.",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-hermoso-dos-ambientes-58112639.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=1"
+        "Barrio": "Recoleta, Capital Federal",
+        "Precio": "$ 650.000",
+        "Descripcion": "65 m² tot.3 amb.2 dorm.1 baño1 coch.",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-dueno-directo-alquilo-hermoso-departamento-excelente-58123632.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=1"
     },
     {
         "Barrio": "Flores Norte, Flores",
         "Precio": "$ 620.000",
         "Descripcion": "75 m² tot.3 amb.2 dorm.1 baño1 coch.",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-departamento-3-ambientes-58112416.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=11"
-    },
-    {
-        "Barrio": "Flores Norte, Flores",
-        "Precio": "$ 580.000",
-        "Descripcion": "70 m² tot.1 dorm.1 baño1 coch.",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-departamento-2-ambientes-58112355.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=15"
-    },
-    {
-        "Barrio": "Flores Norte, Flores",
-        "Precio": "$ 580.000",
-        "Descripcion": "70 m² tot.2 amb.1 dorm.1 baño1 coch.",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-departamento-2-ambientes-58112354.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=16"
-    },
-    {
-        "Barrio": "Balvanera, Capital Federal",
-        "Precio": "$ 560.000",
-        "Descripcion": "70 m² tot.2 amb.1 dorm.1 baño1 coch.",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-departamento-2-ambiente-58112329.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=20"
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-departamento-3-ambientes-58123634.html?n_src=Listado&n_pills=Encargado&n_pg=1&n_pos=2"
     },
     {
         "Barrio": "Recoleta, Capital Federal",
         "Precio": "$ 650.000",
-        "Descripcion": "65 m² tot.3 amb.2 dorm.1 baño1 coch.",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-dueno-directo-alquilo-hermoso-departamento-excelente-58112326.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=22"
+        "Descripcion": "70 m² tot.2 amb.2 dorm.1 baño1 coch.",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-alquilo-urgente-departamento-amueblado-58123283.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=5"
     },
     {
-        "Barrio": "Villa del Parque, Capital Federal",
-        "Precio": "$ 589.000",
-        "Descripcion": "70 m² tot.2 amb.1 dorm.1 baño",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-dueno-directo-depto-2-amb-con-balcon-y-patio-si-o-si-58112328.html?n_src=Listado&n_pg=1&n_pos=23"
+        "Barrio": "Villa Urquiza, Capital Federal",
+        "Precio": "$ 600",
+        "Descripcion": "52 m² tot.1 amb.1 dorm.1 baño1 coch.",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-departamento-monoambiente-en-capita-58122617.html?n_src=Listado&n_pills=Parrilla&n_pg=1&n_pos=6"
     },
     {
-        "Barrio": "Villa del Parque, Capital Federal",
+        "Barrio": "Caballito Norte, Caballito",
+        "Precio": "$ 500.000",
+        "Descripcion": "67 m² tot.3 amb.2 dorm.1 baño1 coch.",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-alquiler-temporario-58122684.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=7"
+    },
+    {
+        "Barrio": "Lomas de Núñez, Núñez",
+        "Precio": "USD 1.100",
+        "Descripcion": "87 m² tot.4 amb.3 dorm.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-hermoso-departamento-en-alquiler-temporal-57556303.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=8"
+    },
+    {
+        "Barrio": "Palermo Nuevo, Palermo",
+        "Precio": "$ 600.000",
+        "Descripcion": "36 m² tot.1 amb.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-dueno-alquiler-espectacular-zona-1-ambiente-balcon-58121291.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=9"
+    },
+    {
+        "Barrio": "Villa Lugano, Capital Federal",
+        "Precio": "$ 600",
+        "Descripcion": "71 m² tot.4 amb.3 dorm.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-departamento-luminoso-58121741.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=10"
+    },
+    {
+        "Barrio": "Balvanera, Capital Federal",
+        "Precio": "$ 800.000",
+        "Descripcion": "63 m² tot.2 amb.1 dorm.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-alquiler-departamento-2-ambientes-a-estrenar-54703860.html?n_src=Listado&n_pg=1&n_pos=11"
+    },
+    {
+        "Barrio": "Almagro, Capital Federal",
         "Precio": "$ 1.300.000",
-        "Descripcion": "94 m² tot.4 amb.3 dorm.1 baño",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-dueno-directo-departamento-4-ambientes-en-alquiler-en-47242733.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=24"
+        "Descripcion": "114 m² tot.4 amb.3 dorm.2 baños",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-departamento-4-amb-muy-luminoso-almagro-dueno-58121259.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=12"
     },
     {
         "Barrio": "Recoleta, Capital Federal",
-        "Precio": "$ 750",
-        "Descripcion": "90 m² tot.4 amb.2 dorm.1 baño1 coch.",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-depto-4-ambientes-remodelado-a-nuevo-58112246.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=25"
+        "Precio": "$ 405.000",
+        "Descripcion": "29 m² tot.1 amb.1 dorm.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-french-2853-reparacion-hasta-febrero-mono-c-patio-58121010.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=13"
     },
     {
-        "Barrio": "Boedo, Capital Federal",
-        "Precio": "$ 570.000",
-        "Descripcion": "80 m² tot.2 amb.1 dorm.1 baño1 coch.",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-departamento-en-boedo-58112169.html?n_src=Listado&n_pills=Encargado&n_pg=1&n_pos=26"
-    },
-    {
-        "Barrio": "Villa del Parque, Capital Federal",
-        "Precio": "USD 650",
-        "Descripcion": "55 m² tot.2 amb.1 dorm.1 baño",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-duplex-c-terrazas-y-parrilla-amueblado-58112118.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=27"
-    },
-    {
-        "Barrio": "Belgrano R, Belgrano",
-        "Precio": "$ 570.000",
-        "Descripcion": "80 m² tot.2 amb.1 dorm.1 baño1 coch.",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-departamento-en-belgrano-58112069.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=28"
+        "Barrio": "Recoleta, Capital Federal",
+        "Precio": "$ 650.000",
+        "Descripcion": "65 m² tot.2 amb.1 dorm.1 baño1 coch.",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-dueno-directo-alquila-hermoso-departamento-en-58120441.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=14"
     },
     {
         "Barrio": "Las Cañitas, Palermo",
-        "Precio": "USD 1.500",
-        "Descripcion": "60 m² tot.2 amb.1 dorm.2 baños",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-depto-en-canitas-2-ambientes-premium.-full-amoblado.-58111248.html?n_src=Listado&n_pills=Permite+mascotas&n_pg=1&n_pos=29"
+        "Precio": "USD 370",
+        "Descripcion": "27 m² tot.1 amb.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-monoambiente-en-las-canitas-58120394.html?n_src=Listado&n_pills=Encargado&n_pg=1&n_pos=15"
     },
     {
-        "Barrio": "Coghlan, Capital Federal",
-        "Precio": "USD 700.000",
-        "Descripcion": "98 m² tot.2 amb.1 dorm.1 baño1 coch.",
-        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-dpto-planta-baja-dueno-alquila-54276036.html?n_src=Listado&n_pills=Terraza&n_pg=1&n_pos=30"
+        "Barrio": "San Cristobal, Capital Federal",
+        "Precio": "$ 485.000",
+        "Descripcion": "45 m² tot.2 amb.1 dorm.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-dueno-alquila-depto-en-san-cristobal-alberti-y-av-58120295.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=16"
+    },
+    {
+        "Barrio": "Almagro Norte, Almagro",
+        "Precio": "$ 350.000",
+        "Descripcion": "21 m² tot.1 amb.1 dorm.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-monoambiente-con-kitchenette-58120072.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=17"
+    },
+    {
+        "Barrio": "Belgrano R, Belgrano",
+        "Precio": "$ 800.000",
+        "Descripcion": "58 m² tot.2 amb.1 dorm.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-espectacular-2-amb-muy-luminoso-frente-belgrano-r-58111000.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=18"
+    },
+    {
+        "Barrio": "Villa Urquiza, Capital Federal",
+        "Precio": "$ 985.000",
+        "Descripcion": "51 m² tot.2 amb.1 dorm.1 baño1 coch.",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-villa-urquiza-2-ambientes-muy-luminoso-excelente-50906594.html?n_src=Listado&n_pills=Laundry&n_pg=1&n_pos=19"
+    },
+    {
+        "Barrio": "Almagro Norte, Almagro",
+        "Precio": "$ 620.000",
+        "Descripcion": "44 m² tot.2 amb.1 dorm.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-billinghurst-y-av-cordoba-53035124.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=20"
+    },
+    {
+        "Barrio": "Villa Urquiza, Capital Federal",
+        "Precio": "USD 900",
+        "Descripcion": "60 m² tot.2 amb.1 dorm.1 baño1 coch.",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-luminoso-2-ambientes-amoblado-c-amenities-en-corredor-57966710.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=21"
+    },
+    {
+        "Barrio": "Primera Junta, Caballito",
+        "Precio": "$ 900.000",
+        "Descripcion": "95 m² tot.4 amb.3 dorm.2 baños",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-alquila-dueno-departamento-en-primera-junta-57134410.html?n_src=Listado&n_pg=1&n_pos=22"
+    },
+    {
+        "Barrio": "Belgrano R, Belgrano",
+        "Precio": "$ 500",
+        "Descripcion": "85 m² tot.2 amb.1 dorm.1 baño1 coch.",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-hermoso-departamento-excelente-estado-duena-directa-58119149.html?n_src=Listado&n_pills=Encargado&n_pg=1&n_pos=23"
+    },
+    {
+        "Barrio": "Barrio Parque, Palermo",
+        "Precio": "$ 2.200",
+        "Descripcion": "120 m² tot.4 amb.3 dorm.2 baños1 coch.",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-hermoso-3-dorm-equipado-full-pileta-cochera-bajas-58117965.html?n_src=Listado&n_pills=Lavadero&n_pg=1&n_pos=24"
+    },
+    {
+        "Barrio": "Balvanera, Capital Federal",
+        "Precio": "$ 650.000",
+        "Descripcion": "40 m² tot.2 amb.1 dorm.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-dueno-directo-2-amb.-amplios-y-reciclado-con-estilo-58118412.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=25"
+    },
+    {
+        "Barrio": "Almagro Norte, Almagro",
+        "Precio": "$ 550.000",
+        "Descripcion": "34 m² tot.1 amb.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-monoambiente-almagro-impecable-estado-todo-a-nuevo-58117812.html?n_src=Listado&n_pg=1&n_pos=26"
+    },
+    {
+        "Barrio": "Balvanera, Capital Federal",
+        "Precio": "USD 400",
+        "Descripcion": "36 m² tot.2 amb.1 dorm.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-departamento-totalmente-amueblado-50949133.html?n_src=Listado&n_pg=1&n_pos=27"
+    },
+    {
+        "Barrio": "San Telmo, Capital Federal",
+        "Precio": "USD 600",
+        "Descripcion": "32 m² tot.1 amb.1 baño",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-excelente-monoambiente-amoblado-san-telmo-cercanias-58117072.html?n_src=Listado&n_pills=Aire+acondicionado&n_pg=1&n_pos=28"
+    },
+    {
+        "Barrio": "Recoleta, Capital Federal",
+        "Precio": "$ 600",
+        "Descripcion": "74 m² tot.3 amb.2 dorm.2 baños",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-alquilo-departamento-hermoso-en-palermo-58117214.html?n_src=Listado&n_pg=1&n_pos=29"
+    },
+    {
+        "Barrio": "Las Cañitas, Palermo",
+        "Precio": "USD 2.499",
+        "Descripcion": "155 m² tot.5 amb.3 dorm.2 baños1 coch.",
+        "Link": "https://www.zonaprop.com.ar/propiedades/clasificado/alclappa-depto-amoblado-vista-panoramica-torre-dorrego-56998658.html?n_src=Listado&n_pills=Encargado&n_pg=1&n_pos=30"
     }
 ]
