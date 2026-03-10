@@ -2,6 +2,21 @@ import cloudscraper
 import pandas as pd
 import json
 from bs4 import BeautifulSoup
+from urllib.parse import urlsplit, urlunsplit
+
+
+def limpiar_link(url):
+    parsed = urlsplit(url)
+    return urlunsplit((parsed.scheme, parsed.netloc, parsed.path, '', ''))
+
+
+def esta_disponible(scraper, url):
+    try:
+        response = scraper.get(url, timeout=20, allow_redirects=True)
+        # Zonaprop usa 410 para avisos caídos/no disponibles.
+        return response.status_code != 410
+    except Exception:
+        return False
 
 def hacer_scraping():
     # Configuración del "disfraz" para saltar bloqueos
@@ -20,7 +35,7 @@ def hacer_scraping():
     resultados = []
 
     try:
-        response = scraper.get(url)
+        response = scraper.get(url, timeout=30)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             propiedades = soup.find_all('div', {'data-qa': 'posting PROPERTY'})
@@ -31,7 +46,7 @@ def hacer_scraping():
                     if not enlace or '/propiedades/' not in enlace['href']:
                         continue
                         
-                    link_final = "https://www.zonaprop.com.ar" + enlace['href']
+                    link_final = limpiar_link("https://www.zonaprop.com.ar" + enlace['href'])
                     precio = prop.find(attrs={"data-qa": "POSTING_CARD_PRICE"}).text.strip()
                     ubicacion = prop.find(attrs={"data-qa": "POSTING_CARD_LOCATION"}).text.strip()
                     titulo = prop.find('h3').text.strip()
@@ -57,9 +72,12 @@ def hacer_scraping():
         total_sucios = len(df)
         df = df.drop_duplicates(subset=['Barrio', 'Precio', 'Descripcion'], keep='first')
         total_limpios = len(df)
+        df = df[df['Link'].apply(lambda link: esta_disponible(scraper, link))]
+        total_disponibles = len(df)
         
         print(f"🔥 ¡ÉXITO! Se capturaron {total_sucios} avisos.")
         print(f"✨ Limpieza completada: Se eliminaron {total_sucios - total_limpios} repetidos.")
+        print(f"✅ Disponibilidad validada: {total_disponibles} avisos activos.")
         
         # Guardar JSON para la web
         resultados_limpios = df.to_dict(orient='records')
